@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ulp.logininmo.ui.home.HomeFragment"
+        android:label="Mapa"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.ulp.logininmo.ui.perfil.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.ulp.logininmo.ui.inmuebles.InmueblesFragment"
+        android:label="Inmuebles"
+        tools:layout="@layout/fragment_inmuebles" >
+
+        <action
+            android:id="@+id/action_nav_slideshow_to_agregar_inmueble"
+            app:destination="@id/agregarInmueble" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/agregarInmueble"
+        android:name="com.ulp.logininmo.ui.inmuebles.AgregarInmuebleFragment"
+        android:label="Agregar inmueble"
+        tools:layout="@layout/fragment_agregar_inmueble" >
+        <action
+            android:id="@+id/action_agregar_inmueble_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_agregarInmueble_to_editarInmuebleFragment"
+            app:destination="@id/editarInmuebleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.ulp.logininmo.ui.contratos.ContratosFragment"
+        android:label="Contratos"
+        tools:layout="@layout/fragment_contratos" >
+        <action
+            android:id="@+id/action_nav_contratos_to_verContrato"
+            app:destination="@id/verContrato" />
+    </fragment>
+    <fragment
+        android:id="@+id/verContrato"
+        android:name="com.ulp.logininmo.ui.contratos.VerContratoFragment"
+        android:label="Detalle contrato"
+        tools:layout="@layout/fragment_ver_contrato" >
+        <action
+            android:id="@+id/action_verContrato_to_nav_contratos"
+            app:destination="@id/nav_contratos" />
+        <action
+            android:id="@+id/action_verContrato_to_pagosFragment"
+            app:destination="@id/pagosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagosFragment"
+        android:name="com.ulp.logininmo.ui.contratos.PagosFragment"
+        android:label="Pagos" >
+        <action
+            android:id="@+id/action_pagosFragment_to_verContrato"
+            app:destination="@id/verContrato" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarInmuebleFragment"
+        android:name="com.ulp.logininmo.ui.inmuebles.EditarInmuebleFragment"
+        android:label="Editar inmueble" >
+        <action
+            android:id="@+id/action_editarInmuebleFragment_to_agregarInmueble"
+            app:destination="@id/agregarInmueble" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.ulp.logininmo.ui.Logout.LogOutFragment"
+        android:label="Salir"
+        tools:layout="@layout/fragment_log_out" />
+
+
+</navigation>

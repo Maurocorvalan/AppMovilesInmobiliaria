@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/inmofondoagginm"
+    tools:context=".ui.inmuebles.AgregarInmuebleFragment">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="277dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:text="Informacion del inmueble"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etDireccion"
+        android:layout_width="289dp"
+        android:layout_height="51dp"
+        android:background="#88121449"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:textColorHint="#FFFFFF"
+        android:hint="Direccion"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+
+    <Spinner
+        android:id="@+id/spinner_uso"
+        android:layout_width="289dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="#88121449"
+        android:entries="@array/uso_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDireccion"
+        app:layout_constraintWidth_default="spread" />
+
+    <Spinner
+        android:id="@+id/spinner_tipo"
+        android:layout_width="289dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:background="#88121449"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/tipo_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_uso"
+        app:layout_constraintWidth_default="spread" />
+
+    <EditText
+        android:id="@+id/etLatitud"
+        android:layout_width="289dp"
+        android:layout_height="51dp"
+        android:background="#88121449"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Latitud"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_tipo" />
+
+    <EditText
+        android:id="@+id/etLongitud"
+        android:layout_width="289dp"
+        android:textColorHint="#FFFFFF"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="#88121449"
+        android:ems="10"
+        android:hint="Longitud"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLatitud" />
+
+    <ImageView
+        android:id="@+id/imgInmuebleAdd"
+        android:background="#88121449"
+        android:layout_width="161dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btAgregarInmueble"
+        android:layout_width="166dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="48dp"
+        android:text="Agregar inmueble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgInmuebleAdd" />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="289dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="#88121449"
+        android:textColorHint="#FFFFFF"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLongitud" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textColor="#FFFFFF"
+        android:text="Disponible"
+        android:padding="10dp"
+        android:background="#88121449"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
+
+    <Button
+        android:id="@+id/btAgregarFoto"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="92dp"
+        android:text="Agregar foto"
+        app:layout_constraintBottom_toTopOf="@+id/btAgregarInmueble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toEndOf="@+id/imgInmuebleAdd"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:layout_constraintVertical_bias="0.818" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
