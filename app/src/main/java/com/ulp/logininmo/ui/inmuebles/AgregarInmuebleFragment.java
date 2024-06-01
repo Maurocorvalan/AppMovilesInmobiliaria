@@ -76,6 +76,7 @@ public class AgregarInmuebleFragment extends Fragment {
         double latitud = Double.parseDouble(binding.etLatitud.getText().toString());
         double longitud = Double.parseDouble(binding.etLongitud.getText().toString());
         double valor = Double.parseDouble(binding.etValor.getText().toString());
+        int ambientes = Integer.parseInt(binding.etAmbientes.getText().toString());
         boolean disponible = binding.checkBox.isChecked();
 
         Inmueble inmueble = new Inmueble();
@@ -85,6 +86,7 @@ public class AgregarInmuebleFragment extends Fragment {
         inmueble.setLatitud(latitud);
         inmueble.setLongitud(longitud);
         inmueble.setValor(valor);
+        inmueble.setAmbientes(ambientes);
         inmueble.setDisponible(disponible);
 
         mv.cargarinmueble(inmueble);

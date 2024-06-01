@@ -40,6 +40,7 @@ public class PagosAdapter  extends RecyclerView.Adapter<PagosAdapter.PagosViewHo
         holder.tvCodigoContratoPago.setText(String.valueOf(pago.getIdContrato()));
         holder.tvMonto.setText(String.valueOf(pago.getMonto()));
         holder.tvFechaPago.setText(String.valueOf(pago.getFechaPago()));
+        holder.tvConcepto.setText(pago.getDetalle());
 
     }
     @Override
@@ -54,7 +55,7 @@ public class PagosAdapter  extends RecyclerView.Adapter<PagosAdapter.PagosViewHo
 
 
     public static class PagosViewHolder extends RecyclerView.ViewHolder{
-        public TextView tvIdPago, tvCodigoContratoPago, tvMonto, tvFechaPago;
+        public TextView tvIdPago, tvCodigoContratoPago, tvMonto, tvFechaPago, tvConcepto;
 
         public PagosViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,7 +63,7 @@ public class PagosAdapter  extends RecyclerView.Adapter<PagosAdapter.PagosViewHo
             tvCodigoContratoPago = itemView.findViewById(R.id.tvCodigoContratoPago);
             tvMonto = itemView.findViewById(R.id.tvMonto);
             tvFechaPago = itemView.findViewById(R.id.tvFechaPago);
-
+            tvConcepto = itemView.findViewById(R.id.tvConcepto);
 
 
 

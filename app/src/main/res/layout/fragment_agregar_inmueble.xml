@@ -11,12 +11,12 @@
         android:id="@+id/tvInfo"
         android:layout_width="277dp"
         android:layout_height="42dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:text="Informacion del inmueble"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,12 +40,11 @@
         android:layout_width="289dp"
         android:layout_height="51dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:background="#88121449"
         android:entries="@array/uso_array"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDireccion"
         app:layout_constraintWidth_default="spread" />
@@ -55,13 +54,12 @@
         android:layout_width="289dp"
         android:layout_height="51dp"
         android:layout_marginStart="16dp"
-        android:background="#88121449"
+        android:layout_marginTop="12dp"
 
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:background="#88121449"
         android:entries="@array/tipo_array"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinner_uso"
         app:layout_constraintWidth_default="spread" />
@@ -70,38 +68,36 @@
         android:id="@+id/etLatitud"
         android:layout_width="289dp"
         android:layout_height="51dp"
+        android:layout_marginTop="8dp"
         android:background="#88121449"
-        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Latitud"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_tipo" />
 
     <EditText
         android:id="@+id/etLongitud"
         android:layout_width="289dp"
-        android:textColorHint="#FFFFFF"
         android:layout_height="51dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="#88121449"
         android:ems="10"
         android:hint="Longitud"
         android:inputType="numberDecimal"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etLatitud" />
 
     <ImageView
         android:id="@+id/imgInmuebleAdd"
-        android:background="#88121449"
         android:layout_width="161dp"
         android:layout_height="144dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
+        android:background="#88121449"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
         tools:src="@tools:sample/avatars" />
@@ -121,30 +117,44 @@
         android:id="@+id/etValor"
         android:layout_width="289dp"
         android:layout_height="51dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="#88121449"
-        android:textColorHint="#FFFFFF"
         android:ems="10"
         android:hint="Valor"
         android:inputType="numberDecimal"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etLongitud" />
+
+
+    <EditText
+        android:id="@+id/etAmbientes"
+        android:layout_width="289dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:background="#88121449"
+        android:ems="10"
+        android:hint="Ambientes"
+        android:inputType="number"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:textColor="#FFFFFF"
-        android:text="Disponible"
-        android:padding="10dp"
+        android:layout_marginTop="12dp"
         android:background="#88121449"
+        android:padding="10dp"
+        android:text="Disponible"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etValor" />
+        app:layout_constraintTop_toBottomOf="@+id/etAmbientes" />
 
     <Button
         android:id="@+id/btAgregarFoto"

@@ -35,14 +35,7 @@ public class LogOutFragment extends Fragment {
         binding = FragmentLogOutBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         Button btnCerrarSesion = binding.btnSalir;
-
-        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showExitDialog();
-
-            }
-        });
+        showExitDialog();
         return root;
 
     }
